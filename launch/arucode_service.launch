@@ -1,8 +1,0 @@
-<launch>
-  <node name="aruco_marker_detect" pkg="aruco_detect" type="aruco_service.py" output="screen" >
-    <param name="aruco_type" type="str" value="DICT_6X6_100" />
-    <param name="aruco_length" type="double" value="0.049" />
-    <param name="aruco_transforms" type="str" value="/home/jure/ros_workspaces/catkin_ws/src/ArUcoROSpy/src/marker_transforms.npz" />
-    <param name="aruco_main_marker_id" type="int" value="1" />
-  </node> 
-</launch>

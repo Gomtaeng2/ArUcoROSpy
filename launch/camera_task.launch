@@ -1,6 +1,0 @@
-<launch>
-
-    <include file="$(find aruco_detect)/launch/arucode_node_hj.launch"/> 
-    <include file="$(find realsense2_camera)/launch/rs_camera.launch"/> 
-
-</launch>

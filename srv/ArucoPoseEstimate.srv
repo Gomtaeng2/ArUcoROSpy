@@ -1,5 +1,0 @@
-sensor_msgs/Image img 
-sensor_msgs/CameraInfo camera_info 
----
-geometry_msgs/Pose aruco_pose
-std_msgs/Bool success

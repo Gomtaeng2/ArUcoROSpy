@@ -1,0 +1,22 @@
+from launch import LaunchDescription
+from launch_ros.actions import Node
+from ament_index_python.packages import get_package_share_directory
+import os
+
+def generate_launch_description():
+    pkg_share = get_package_share_directory('aruco_detect')
+    transform_file_path = os.path.join(pkg_share, 'marker_transforms.npz')
+    return LaunchDescription([
+        Node(
+            package='aruco_detect',
+            executable='aruco_service',
+            name='aruco_service',
+            output='screen',
+            parameters=[
+                {'aruco_type': 'DICT_5X5_100'},
+                {'aruco_length': 0.05},
+                {'aruco_transforms': transform_file_path},
+                {'aruco_main_marker_id': 0}
+            ]
+        )
+    ])
