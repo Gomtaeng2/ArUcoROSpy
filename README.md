@@ -1,4 +1,4 @@
-# ArUcoROSpy
+# ArUcoROSpy (To be modified)
 Detect a set of aruco markers to estimate a pose of an object. Transforms between markers can be found or provided in a form of a .npz file. The .npz file should contain a dictionary with a transforms (4x4 matrix) of each marker to the main marker
 
 ##Detecting 36 ArUco Markers at once
@@ -80,7 +80,7 @@ Before running any of the versions above the transformation matrix between marke
 First open "aruco_calibrate.launch" file and set the appropriate parameters.
 Run the following command. For the next 60 seconds ros will try to calculate the transformations between markers. Try to capture all markers from as many angles as possible. At least two markers should be seen in each frame.
 ```bash
-roslaunch aruco_detect aruco_calibrate.launch
+ros2 launch aruco_detect aruco_calibrate.launch.py
 ```
 
 ## 2. Run service or node
@@ -97,11 +97,7 @@ In the launch file the following parameters may be set:
 
 To run the node:
 ```bash
-roslaunch aruco_detect arucode_node.launch
-```
-To run as a service:
-```bash
-roslaunch aruco_detect arucode_service.launch
+ros2 launch aruco_detect aruco_node.launch.py
 ```
 
 

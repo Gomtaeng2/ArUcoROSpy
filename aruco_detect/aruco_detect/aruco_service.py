@@ -131,7 +131,7 @@ class ArucoService(Node):
             rvecs, tvecs, _ = aruco.estimatePoseSingleMarkers(corners, self.marker_size, camera_matrix, dist_coeffs)
             for i, marker_id in enumerate(ids):
                 aruco.drawDetectedMarkers(output_img, [corners[i]], np.array([marker_id]))
-                cv2.drawFrameAxes(output_img, camera_matrix, dist_coeffs, rvecs[i], tvecs[i], 0.05)
+                cv2.drawFrameAxes(output_img, camera_matrix, dist_coeffs, rvecs[i], tvecs[i], 0.03)
                 marker_pose = self.make_pose(rvecs[i], tvecs[i])
                 marker_pose_list.append(marker_pose)
                 id_list.append(int(marker_id))

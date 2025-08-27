@@ -168,7 +168,7 @@ class ArucoNode(Node):
             for i, marker_id in enumerate(ids):
                 rvec, tvec = rvecs[i], tvecs[i]
                 aruco.drawDetectedMarkers(output_img, [corners[i]], np.array([marker_id]))
-                cv2.drawFrameAxes(output_img, self.K, self.D, rvec, tvec, 0.05)
+                cv2.drawFrameAxes(output_img, self.K, self.D, rvec, tvec, 0.03)
 
                 marker_pose = self.make_pose(rvec, tvec)
 

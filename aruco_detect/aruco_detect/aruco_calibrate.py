@@ -145,7 +145,7 @@ class ArucoCalibrate(Node):
 
                 # 디텍션 결과 그리기 (API 동일)
                 aruco.drawDetectedMarkers(output_img, [corners[i]], np.array([marker_id]))
-                cv2.drawFrameAxes(output_img, self.K, self.D, rvec, tvec, 0.05)
+                cv2.drawFrameAxes(output_img, self.K, self.D, rvec, tvec, 0.03)
 
                 marker_pose = self.make_pose(rvec, tvec)
 

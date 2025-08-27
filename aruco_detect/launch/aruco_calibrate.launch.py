@@ -15,7 +15,7 @@ def generate_launch_description():
             parameters=[
                 {'aruco_type': 'DICT_5X5_100'},
                 {'aruco_length': 0.05},
-                {'aruco_save_dir': pkg_share},   # ← share 디렉토리에 저장되도록
+                {'aruco_save_dir': pkg_share},  
                 {'aruco_main_marker_id': 0},
                 {'camera_img_topic': '/camera/color/image_raw'},
                 {'camera_info_topic': '/camera/color/camera_info'},
